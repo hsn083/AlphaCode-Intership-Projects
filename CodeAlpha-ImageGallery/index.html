@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery | CodeAlpha</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Pixel<span>Gallery</span></div>
+        <p>Creative Moments Collection</p>
+    </header>
+
+    <!-- Hero Section -->
+    
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <span class="hero-badge">
+            ✦ THE ART OF PHOTOGRAPHY
+        </span>
+
+        <h1>
+            Capture The
+            <span>Beauty</span>
+            Of Every Moment.
+        </h1>
+
+        <p>
+            Explore breathtaking photography, stunning landscapes
+            and unforgettable moments through our creative gallery.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#galleryGrid" class="explore-btn">
+                Explore Gallery <span>→</span>
+            </a>
+
+            <div class="hero-rating">
+                <span>✦ ✦ ✦ ✦ ✦</span>
+                <small>Beautiful Moments, One Place</small>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="hero-bottom">
+
+        <div class="hero-stat">
+            <h3>08+</h3>
+            <p>Beautiful Photos</p>
+        </div>
+
+        <div class="hero-stat">
+            <h3>04</h3>
+            <p>Categories</p>
+        </div>
+
+        <div class="hero-stat">
+            <h3>100%</h3>
+            <p>Creative Moments</p>
+        </div>
+
+    </div>
+
+    <div class="scroll-indicator">
+        <span>SCROLL TO EXPLORE</span>
+        <div></div>
+    </div>
+
+</section>
+
+
+    <!-- Gallery Section -->
+    <main class="gallery-section">
+
+        <div class="section-heading">
+            <div>
+                <h2>Our Gallery</h2>
+                <p>Explore our collection of beautiful photographs.</p>
+            </div>
+            <span class="photo-count" id="photoCount">8 Photos</span>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All Photos</button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="mountains">Mountains</button>
+            <button class="filter-btn" data-filter="ocean">Ocean</button>
+            <button class="filter-btn" data-filter="city">City</button>
+        </div>
+
+        <!-- Images -->
+        <div class="gallery-grid" id="galleryGrid">
+
+            <div class="gallery-item" data-category="nature">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800" alt="Beautiful green landscape">
+                <div class="image-info">
+                    <h3>Beautiful Nature</h3>
+                    <p>Nature Collection</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="mountains">
+                <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800" alt="Mountain lake">
+                <div class="image-info">
+                    <h3>Mountain Lake</h3>
+                    <p>Mountain Collection</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="ocean">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800" alt="Beautiful ocean beach">
+                <div class="image-info">
+                    <h3>Ocean Paradise</h3>
+                    <p>Ocean Collection</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="nature">
+                <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800" alt="Sunrise in nature">
+                <div class="image-info">
+                    <h3>Golden Sunrise</h3>
+                    <p>Nature Collection</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="ocean">
+                <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800" alt="Ocean waves">
+                <div class="image-info">
+                    <h3>Ocean Waves</h3>
+                    <p>Ocean Collection</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="mountains">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800" alt="Snowy mountains">
+                <div class="image-info">
+                    <h3>Snowy Mountains</h3>
+                    <p>Mountain Collection</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="city">
+                <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800" alt="City skyline">
+                <div class="image-info">
+                    <h3>City Lights</h3>
+                    <p>City Collection</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="nature">
+                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800" alt="Mountain landscape">
+                <div class="image-info">
+                    <h3>Peaceful Landscape</h3>
+                    <p>Nature Collection</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+
+        <button class="close-btn" id="closeBtn">&times;</button>
+
+        <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
+
+        <div class="lightbox-content">
+            <img src="" alt="Selected image" id="lightboxImage">
+            <div class="lightbox-caption">
+                <h3 id="lightboxTitle"></h3>
+                <p id="lightboxCounter"></p>
+            </div>
+        </div>
+
+        <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 PixelGallery. Created for CodeAlpha Internship.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeonCalc | Smart Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <main class="calculator-container">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="brand">
+                <div class="brand-icon">✳</div>
+                <div>
+                    <h2>NEON<span>CALC</span></h2>
+                    <p>SMART CALCULATOR</p>
+                </div>
+            </div>
+
+            <button class="history-toggle" id="historyToggle" title="History">
+                ↶
+            </button>
+        </header>
+
+        <!-- Calculator -->
+        <section class="calculator">
+
+            <div class="calculator-top">
+                <span class="mode-label">SCIENTIFIC MODE</span>
+                <button id="angleToggle" class="angle-toggle">DEG</button>
+            </div>
+
+            <!-- Display -->
+            <div class="display">
+                <div class="expression" id="expression">0</div>
+                <div class="result" id="result">0</div>
+            </div>
+
+            <!-- Scientific Buttons -->
+            <div class="scientific-grid">
+
+                <button data-value="sin(">sin</button>
+                <button data-value="cos(">cos</button>
+                <button data-value="tan(">tan</button>
+                <button data-value="sqrt(">√</button>
+                <button data-value="^">xʸ</button>
+
+                <button data-value="log(">log</button>
+                <button data-value="ln(">ln</button>
+                <button data-value="pi">π</button>
+                <button data-value="(">(</button>
+                <button data-value=")">)</button>
+
+            </div>
+
+            <!-- Main Buttons -->
+            <div class="button-grid">
+
+                <button class="action-btn" data-action="clear">AC</button>
+                <button class="action-btn" data-action="delete">DEL</button>
+                <button class="action-btn" data-value="%">%</button>
+                <button class="operator-btn" data-value="/">÷</button>
+
+                <button data-value="7">7</button>
+                <button data-value="8">8</button>
+                <button data-value="9">9</button>
+                <button class="operator-btn" data-value="*">×</button>
+
+                <button data-value="4">4</button>
+                <button data-value="5">5</button>
+                <button data-value="6">6</button>
+                <button class="operator-btn" data-value="-">−</button>
+
+                <button data-value="1">1</button>
+                <button data-value="2">2</button>
+                <button data-value="3">3</button>
+                <button class="operator-btn" data-value="+">+</button>
+
+                <button data-value="0" class="zero-btn">0</button>
+                <button data-value=".">.</button>
+                <button class="equal-btn" data-action="calculate">=</button>
+
+            </div>
+
+            <div class="calculator-footer">
+                <span>✦ POWERED BY HASSAN</span>
+                <span>VERSION 1.0</span>
+            </div>
+
+        </section>
+
+        <!-- History Panel -->
+        <aside class="history-panel" id="historyPanel">
+
+            <div class="history-header">
+                <h3>Calculation History</h3>
+                <button id="closeHistory">×</button>
+            </div>
+
+            <div id="historyList" class="history-list">
+                <p class="empty-history">No calculations yet.</p>
+            </div>
+
+            <button class="clear-history" id="clearHistory">
+                Clear History
+            </button>
+
+        </aside>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
